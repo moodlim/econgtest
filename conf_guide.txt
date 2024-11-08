@@ -1,0 +1,704 @@
+[asset_1]
+type=OS
+# 진단 대상 자산 타입 지정
+sub_type=LINUX
+# 진단 항목 코드 입력
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=LNX_1.01,LNX_1.02,LNX_1.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=LNX_ALL
+#   3) 설정 값이 없으면 Common Compliance, 2021 주요기반, 2023 금융기반, 정보보안관리평가(공공기관) 전체 보안규정 진단 수행
+ref=LNX_1.01,LNX_1.02,LNX_1.03,LNX_1.04,LNX_1.05,LNX_1.06,LNX_1.07,LNX_1.08,LNX_1.09,LNX_1.10,LNX_2.01,LNX_2.02,LNX_2.03,LNX_2.04,LNX_2.05,LNX_2.06,LNX_2.07,LNX_2.08,LNX_2.09,LNX_2.10,LNX_2.11,LNX_2.12,LNX_2.13,LNX_2.14,LNX_2.15,LNX_2.16,LNX_2.17,LNX_2.18,LNX_2.19,LNX_2.20,LNX_3.01,LNX_3.02,LNX_3.03,LNX_3.04,LNX_3.05,LNX_3.06,LNX_3.07,LNX_3.08,LNX_3.09,LNX_4.01,LNX_4.02,LNX_4.03,LNX_5.01,LNX_5.02,LNX_5.03,LNX_5.04,LNX_5.05,LNX_5.06,LNX_6.01,LNX_6.02,LNX_6.03,LNX_7.01,LNX_8.01,LNX_8.02,LNX_8.03,U-2021-01,U-2021-02,U-2021-03,U-2021-04, U-2021-05,U-2021-06,U-2021-07,U-2021-08,U-2021-09,U-2021-10,U-2021-11,U-2021-12,U-2021-13,U-2021-14,U-2021-15,U-2021-16,U-2021-17,U-2021-18,U-2021-19,U-2021-20,U-2021-21,U-2021-22,U-2021-23,U-2021-24,U-2021-25,U-2021-26,U-2021-27,U-2021-28,U-2021-29,U-2021-30,U-2021-31,U-2021-32,U-2021-33,U-2021-34,U-2021-35,U-2021-36,U-2021-37,U-2021-38,U-2021-39,U-2021-40,U-2021-41,U-2021-42,U-2021-43,U-2021-44,U-2021-45,U-2021-46,U-2021-47,U-2021-48,U-2021-49,U-2021-50,U-2021-51,U-2021-52,U-2021-53,U-2021-54,U-2021-55,U-2021-56,U-2021-57,U-2021-58,U-2021-59,U-2021-60,U-2021-61,U-2021-62,U-2021-63,U-2021-64,U-2021-65,U-2021-66,U-2021-67,U-2021-68,U-2021-69,U-2021-70,U-2021-71,U-2021-72,SRV-2023-001,SRV-2023-004,SRV-2023-005,SRV-2023-006,SRV-2023-007,SRV-2023-008,SRV-2023-009,SRV-2023-010,SRV-2023-011,SRV-2023-012,SRV-2023-013,SRV-2023-014,SRV-2023-015,SRV-2023-016,SRV-2023-021,SRV-2023-022,SRV-2023-025,SRV-2023-026,SRV-2023-027,SRV-2023-028,SRV-2023-034,SRV-2023-035,SRV-2023-037,SRV-2023-040,SRV-2023-042,SRV-2023-043,SRV-2023-044,SRV-2023-045,SRV-2023-046,SRV-2023-047,SRV-2023-048,SRV-2023-060,SRV-2023-062,SRV-2023-063,SRV-2023-064,SRV-2023-066,SRV-2023-069,SRV-2023-070,SRV-2023-073,SRV-2023-074,SRV-2023-075,SRV-2023-081,SRV-2023-082,SRV-2023-083,SRV-2023-084,SRV-2023-087,SRV-2023-091,SRV-2023-092,SRV-2023-093,SRV-2023-094,SRV-2023-095,SRV-2023-096,SRV-2023-108,SRV-2023-109,SRV-2023-112,SRV-2023-115,SRV-2023-118,SRV-2023-121,SRV-2023-122,SRV-2023-127,SRV-2023-131,SRV-2023-133,SRV-2023-142,SRV-2023-144,SRV-2023-147,SRV-2023-148,SRV-2023-158,SRV-2023-161,SRV-2023-164,SRV-2023-165,SRV-2023-166,SRV-2023-170,SRV-2023-171,SRV-2023-173,SRV-2023-174,SRV-2023-175,IU-01,IU-02,IU-03,IU-04,IU-05,IU-06,IU-07,IU-08,IU-09,IU-10,IU-11,IU-12,IU-13,IU-14,IU-15,IU-16,IU-17,IU-18,IU-19,IU-20,IU-21,IU-22,IU-23
+# 선택 옵션 scan_dir : 전체 디스크를 진단해야 할 항목에 대해서 설정된 디렉토리만 진단하도록 제한
+#   ex) scan_dir=/usr,/var,/home
+#scan_dir=
+#
+# 선택 옵션 www-hidden_scan_dir: 숨긴 파일 검색해야 할 항목에 대해서 설정된
+# 디렉토리만 진단하도록 제한
+#   ex) www-hidden_scan_dir=/usr,/var,/home
+#www-hidden_scan_dir=
+#
+# 선택 옵션 suid_sgid_scan_dir: suid, sgid  파일을 검색해야 할 항목에 대해서
+# 설정된 디렉토리만 진단하도록 제한
+#   ex) suid_sgid_scan_dir=/usr,/var,/home
+#suid_sgid_scan_dir=
+#
+# 선택 옵션 webtob_homedir: OS webtob 관련 항목에서 webtob 홈
+# 디렉토리를 지정 
+#   ex) webtob_homedir=/app/webtob
+#webtob_homedir=
+
+[asset_2]
+type=OS
+# 진단 대상 자산 타입 지정
+sub_type=AIX
+# 진단 항목 코드 입력
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=AIX_1.01,AIX_1.02,AIX_1.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=AIX_ALL
+#   3) 설정 값이 없으면 Common Compliance, 2021 주요기반, 2023 금융기반, 정보보안관리평가(공공기관) 전체 보안규정 진단 수행
+ref=AIX_1.01,AIX_1.02,AIX_1.03,AIX_1.04,AIX_1.05,AIX_1.06,AIX_1.07,AIX_1.08,AIX_1.09,AIX_1.10,AIX_2.01,AIX_2.02,AIX_2.03,AIX_2.04,AIX_2.05,AIX_2.06,AIX_2.07,AIX_2.08,AIX_2.09,AIX_2.10,AIX_2.11,AIX_2.12,AIX_2.13,AIX_2.14,AIX_2.15,AIX_2.16,AIX_2.17,AIX_2.18,AIX_2.19,AIX_2.20,AIX_3.01,AIX_3.02,AIX_3.03,AIX_3.04,AIX_3.05,AIX_3.06,AIX_3.07,AIX_3.08,AIX_3.09,AIX_4.01,AIX_4.02,AIX_4.03,AIX_5.01,AIX_5.02,AIX_5.03,AIX_5.04,AIX_5.05,AIX_5.06,AIX_6.01,AIX_6.02,AIX_6.03,AIX_7.01,AIX_8.01,AIX_8.02,AIX_8.03,U-2021-01,U-2021-02,U-2021-03,U-2021-04,U-2021-05,U-2021-06,U-2021-07,U-2021-08,U-2021-09,U-2021-10,U-2021-11,U-2021-12,U-2021-13,U-2021-14,U-2021-15,U-2021-16,U-2021-17,U-2021-18,U-2021-19,U-2021-20,U-2021-21,U-2021-22,U-2021-23,U-2021-24,U-2021-25,U-2021-26,U-2021-27,U-2021-28,U-2021-29,U-2021-30,U-2021-31,U-2021-32,U-2021-33,U-2021-34,U-2021-35,U-2021-36,U-2021-37,U-2021-38,U-2021-39,U-2021-40,U-2021-41,U-2021-42,U-2021-43,U-2021-44,U-2021-45,U-2021-46,U-2021-47,U-2021-48,U-2021-49,U-2021-50,U-2021-51,U-2021-52,U-2021-53,U-2021-54,U-2021-55,U-2021-56,U-2021-57,U-2021-58,U-2021-59,U-2021-60,U-2021-61,U-2021-62,U-2021-63,U-2021-64,U-2021-65,U-2021-66,U-2021-67,U-2021-68,U-2021-69,U-2021-70,U-2021-71,U-2021-72,SRV-2023-001,SRV-2023-004,SRV-2023-005,SRV-2023-006,SRV-2023-007,SRV-2023-008,SRV-2023-009,SRV-2023-010,SRV-2023-011,SRV-2023-012,SRV-2023-013,SRV-2023-014,SRV-2023-015,SRV-2023-016,SRV-2023-021,SRV-2023-022,SRV-2023-025,SRV-2023-026,SRV-2023-027,SRV-2023-028,SRV-2023-034,SRV-2023-035,SRV-2023-037,SRV-2023-040,SRV-2023-042,SRV-2023-043,SRV-2023-044,SRV-2023-045,SRV-2023-046,SRV-2023-047,SRV-2023-048,SRV-2023-060,SRV-2023-062,SRV-2023-063,SRV-2023-064,SRV-2023-066,SRV-2023-069,SRV-2023-070,SRV-2023-073,SRV-2023-074,SRV-2023-075,SRV-2023-081,SRV-2023-082,SRV-2023-083,SRV-2023-084,SRV-2023-087,SRV-2023-091,SRV-2023-092,SRV-2023-093,SRV-2023-094,SRV-2023-095,SRV-2023-096,SRV-2023-108,SRV-2023-109,SRV-2023-112,SRV-2023-115,SRV-2023-118,SRV-2023-121,SRV-2023-122,SRV-2023-127,SRV-2023-131,SRV-2023-133,SRV-2023-142,SRV-2023-144,SRV-2023-147,SRV-2023-148,SRV-2023-158,SRV-2023-161,SRV-2023-164,SRV-2023-165,SRV-2023-166,SRV-2023-170,SRV-2023-171,SRV-2023-173,SRV-2023-174,SRV-2023-175,IU-01,IU-02,IU-03,IU-04,IU-05,IU-07,IU-08,IU-09,IU-10,IU-11,IU-12,IU-13,IU-14,IU-15,IU-16,IU-17,IU-18,IU-19,IU-20,IU-21,IU-22
+# 선택 옵션 scan_dir : 전체 디스크를 진단해야 할 항목에 대해서 설정된 디렉토리만 진단하도록 제한
+#   ex) scan_dir=/usr,/var,/home
+#scan_dir=
+#
+# 선택 옵션 www-hidden_scan_dir: 숨긴 파일 검색해야 할 항목에 대해서 설정된
+# 디렉토리만 진단하도록 제한
+#   ex) www-hidden_scan_dir=/usr,/var,/home
+#www-hidden_scan_dir=
+#
+# 선택 옵션 suid_sgid_scan_dir: suid, sgid  파일을 검색해야 할 항목에 대해서
+# 설정된 디렉토리만 진단하도록 제한
+#   ex) suid_sgid_scan_dir=/usr,/var,/home
+#suid_sgid_scan_dir=
+#
+# 선택 옵션 webtob_homedir: OS webtob 관련 항목에서 webtob 홈
+# 디렉토리를 지정 
+#   ex) webtob_homedir=/app/webtob
+#webtob_homedir=
+
+[asset_3]
+type=OS
+# 진단 대상 자산 타입 지정
+sub_type=HP-UX
+# 진단 항목 코드 입력
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=HPX_1.01,HPX_1.02,HPX_1.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=HPX_ALL
+#   3) 설정 값이 없으면 Common Compliance, 2021 주요기반, 2023 금융기반, 정보보안관리평가(공공기관) 전체 보안규정 진단 수행
+ref=HPX_1.01,HPX_1.02,HPX_1.03,HPX_1.04,HPX_1.05,HPX_1.06,HPX_1.07,HPX_1.08,HPX_1.09,HPX_1.10,HPX_2.01,HPX_2.02,HPX_2.03,HPX_2.04,HPX_2.05,HPX_2.06,HPX_2.07,HPX_2.08,HPX_2.09,HPX_2.10,HPX_2.11,HPX_2.12,HPX_2.13,HPX_2.14,HPX_2.15,HPX_2.16,HPX_2.17,HPX_2.18,HPX_2.19,HPX_2.20,HPX_3.01,HPX_3.02,HPX_3.03,HPX_3.04,HPX_3.05,HPX_3.06,HPX_3.07,HPX_3.08,HPX_3.09,HPX_4.01,HPX_4.02,HPX_4.03,HPX_5.01,HPX_5.02,HPX_5.03,HPX_5.04,HPX_5.05,HPX_5.06,HPX_6.01,HPX_6.02,HPX_6.03,HPX_7.01,HPX_8.01,HPX_8.02,HPX_8.03,U-2021-01,U-2021-02,U-2021-03,U-2021-04,U-2021-05,U-2021-06,U-2021-07,U-2021-08,U-2021-09,U-2021-10,U-2021-11,U-2021-12,U-2021-13,U-2021-14,U-2021-15,U-2021-16,U-2021-17,U-2021-18,U-2021-19,U-2021-20,U-2021-21,U-2021-22,U-2021-23,U-2021-24,U-2021-25,U-2021-26,U-2021-27,U-2021-28,U-2021-29,U-2021-30,U-2021-31,U-2021-32,U-2021-33,U-2021-34,U-2021-35,U-2021-36,U-2021-37,U-2021-38,U-2021-39,U-2021-40,U-2021-41,U-2021-42,U-2021-43,U-2021-44,U-2021-45,U-2021-46,U-2021-47,U-2021-48,U-2021-49,U-2021-50,U-2021-51,U-2021-52,U-2021-53,U-2021-54,U-2021-55,U-2021-56,U-2021-57,U-2021-58,U-2021-59,U-2021-60,U-2021-61,U-2021-62,U-2021-63,U-2021-64,U-2021-65,U-2021-66,U-2021-67,U-2021-68,U-2021-69,U-2021-70,U-2021-71,U-2021-72,SRV-2023-001,SRV-2023-004,SRV-2023-005,SRV-2023-006,SRV-2023-007,SRV-2023-008,SRV-2023-009,SRV-2023-010,SRV-2023-011,SRV-2023-012,SRV-2023-013,SRV-2023-014,SRV-2023-015,SRV-2023-016,SRV-2023-021,SRV-2023-022,SRV-2023-025,SRV-2023-026,SRV-2023-027,SRV-2023-028,SRV-2023-034,SRV-2023-035,SRV-2023-037,SRV-2023-040,SRV-2023-042,SRV-2023-043,SRV-2023-044,SRV-2023-045,SRV-2023-046,SRV-2023-047,SRV-2023-048,SRV-2023-060,SRV-2023-062,SRV-2023-063,SRV-2023-064,SRV-2023-066,SRV-2023-069,SRV-2023-070,SRV-2023-073,SRV-2023-074,SRV-2023-075,SRV-2023-081,SRV-2023-082,SRV-2023-083,SRV-2023-084,SRV-2023-087,SRV-2023-091,SRV-2023-092,SRV-2023-093,SRV-2023-094,SRV-2023-095,SRV-2023-096,SRV-2023-108,SRV-2023-109,SRV-2023-112,SRV-2023-115,SRV-2023-118,SRV-2023-121,SRV-2023-122,SRV-2023-127,SRV-2023-131,SRV-2023-133,SRV-2023-142,SRV-2023-144,SRV-2023-147,SRV-2023-148,SRV-2023-158,SRV-2023-161,SRV-2023-164,SRV-2023-165,SRV-2023-166,SRV-2023-170,SRV-2023-171,SRV-2023-173,SRV-2023-174,SRV-2023-175,IU-01,IU-02,IU-03,IU-04,IU-05,IU-07,IU-08,IU-09,IU-10,IU-11,IU-12,IU-13,IU-14,IU-15,IU-16,IU-17,IU-18,IU-19,IU-20,IU-21,IU-22
+# 선택 옵션 scan_dir : 전체 디스크를 진단해야 할 항목에 대해서 설정된 디렉토리만 진단하도록 제한
+#   ex) scan_dir=/usr,/var,/home
+#scan_dir=
+#
+# 선택 옵션 www-hidden_scan_dir: 숨긴 파일 검색해야 할 항목에 대해서 설정된
+# 디렉토리만 진단하도록 제한
+#   ex) www-hidden_scan_dir=/usr,/var,/home
+#www-hidden_scan_dir=
+#
+# 선택 옵션 suid_sgid_scan_dir: suid, sgid  파일을 검색해야 할 항목에 대해서
+# 설정된 디렉토리만 진단하도록 제한
+#   ex) suid_sgid_scan_dir=/usr,/var,/home
+#suid_sgid_scan_dir=
+#
+# 선택 옵션 webtob_homedir: OS webtob 관련 항목에서 webtob 홈
+# 디렉토리를 지정 
+#   ex) webtob_homedir=/app/webtob
+#webtob_homedir=
+
+[asset_4]
+type=OS
+# 진단 대상 자산 타입 지정
+sub_type=HP-UX(IA64)
+# 진단 항목 코드 입력
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=HPX_1.01,HPX_1.02,HPX_1.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=HPX_ALL
+#   3) 설정 값이 없으면 Common Compliance, 2021 주요기반, 2023 금융기반, 정보보안관리평가(공공기관) 전체 보안규정 진단 수행
+ref=HPX_1.01,HPX_1.02,HPX_1.03,HPX_1.04,HPX_1.05,HPX_1.06,HPX_1.07,HPX_1.08,HPX_1.09,HPX_1.10,HPX_2.01,HPX_2.02,HPX_2.03,HPX_2.04,HPX_2.05,HPX_2.06,HPX_2.07,HPX_2.08,HPX_2.09,HPX_2.10,HPX_2.11,HPX_2.12,HPX_2.13,HPX_2.14,HPX_2.15,HPX_2.16,HPX_2.17,HPX_2.18,HPX_2.19,HPX_2.20,HPX_3.01,HPX_3.02,HPX_3.03,HPX_3.04,HPX_3.05,HPX_3.06,HPX_3.07,HPX_3.08,HPX_3.09,HPX_4.01,HPX_4.02,HPX_4.03,HPX_5.01,HPX_5.02,HPX_5.03,HPX_5.04,HPX_5.05,HPX_5.06,HPX_6.01,HPX_6.02,HPX_6.03,HPX_7.01,HPX_8.01,HPX_8.02,HPX_8.03,U-2021-01,U-2021-02,U-2021-03,U-2021-04,U-2021-05,U-2021-06,U-2021-07,U-2021-08,U-2021-09,U-2021-10,U-2021-11,U-2021-12,U-2021-13,U-2021-14,U-2021-15,U-2021-16,U-2021-17,U-2021-18,U-2021-19,U-2021-20,U-2021-21,U-2021-22,U-2021-23,U-2021-24,U-2021-25,U-2021-26,U-2021-27,U-2021-28,U-2021-29,U-2021-30,U-2021-31,U-2021-32,U-2021-33,U-2021-34,U-2021-35,U-2021-36,U-2021-37,U-2021-38,U-2021-39,U-2021-40,U-2021-41,U-2021-42,U-2021-43,U-2021-44,U-2021-45,U-2021-46,U-2021-47,U-2021-48,U-2021-49,U-2021-50,U-2021-51,U-2021-52,U-2021-53,U-2021-54,U-2021-55,U-2021-56,U-2021-57,U-2021-58,U-2021-59,U-2021-60,U-2021-61,U-2021-62,U-2021-63,U-2021-64,U-2021-65,U-2021-66,U-2021-67,U-2021-68,U-2021-69,U-2021-70,U-2021-71,U-2021-72,SRV-2023-001,SRV-2023-004,SRV-2023-005,SRV-2023-006,SRV-2023-007,SRV-2023-008,SRV-2023-009,SRV-2023-010,SRV-2023-011,SRV-2023-012,SRV-2023-013,SRV-2023-014,SRV-2023-015,SRV-2023-016,SRV-2023-021,SRV-2023-022,SRV-2023-025,SRV-2023-026,SRV-2023-027,SRV-2023-028,SRV-2023-034,SRV-2023-035,SRV-2023-037,SRV-2023-040,SRV-2023-042,SRV-2023-043,SRV-2023-044,SRV-2023-045,SRV-2023-046,SRV-2023-047,SRV-2023-048,SRV-2023-060,SRV-2023-062,SRV-2023-063,SRV-2023-064,SRV-2023-066,SRV-2023-069,SRV-2023-070,SRV-2023-073,SRV-2023-074,SRV-2023-075,SRV-2023-081,SRV-2023-082,SRV-2023-083,SRV-2023-084,SRV-2023-087,SRV-2023-091,SRV-2023-092,SRV-2023-093,SRV-2023-094,SRV-2023-095,SRV-2023-096,SRV-2023-108,SRV-2023-109,SRV-2023-112,SRV-2023-115,SRV-2023-118,SRV-2023-121,SRV-2023-122,SRV-2023-127,SRV-2023-131,SRV-2023-133,SRV-2023-142,SRV-2023-144,SRV-2023-147,SRV-2023-148,SRV-2023-158,SRV-2023-161,SRV-2023-164,SRV-2023-165,SRV-2023-166,SRV-2023-170,SRV-2023-171,SRV-2023-173,SRV-2023-174,SRV-2023-175,IU-01,IU-02,IU-03,IU-04,IU-05,IU-07,IU-08,IU-09,IU-10,IU-11,IU-12,IU-13,IU-14,IU-15,IU-16,IU-17,IU-18,IU-19,IU-20,IU-21,IU-22
+# 선택 옵션 scan_dir : 전체 디스크를 진단해야 할 항목에 대해서 설정된 디렉토리만 진단하도록 제한
+#   ex) scan_dir=/usr,/var,/home
+#scan_dir=
+#
+# 선택 옵션 www-hidden_scan_dir: 숨긴 파일 검색해야 할 항목에 대해서 설정된
+# 디렉토리만 진단하도록 제한
+#   ex) www-hidden_scan_dir=/usr,/var,/home
+#www-hidden_scan_dir=
+#
+# 선택 옵션 suid_sgid_scan_dir: suid, sgid  파일을 검색해야 할 항목에 대해서
+# 설정된 디렉토리만 진단하도록 제한
+#   ex) suid_sgid_scan_dir=/usr,/var,/home
+#suid_sgid_scan_dir=
+#
+# 선택 옵션 webtob_homedir: OS webtob 관련 항목에서 webtob 홈
+# 디렉토리를 지정 
+#   ex) webtob_homedir=/app/webtob
+#webtob_homedir=
+
+[asset_5]
+type=OS
+# 진단 대상 자산 타입 지정
+sub_type=SunOS
+# 진단 항목 코드 입력
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=SUN_1.01,SUN_1.02,SUN_1.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=SUN_ALL
+#   3) 설정 값이 없으면 Common Compliance, 2021 주요기반, 2023 금융기반, 정보보안관리평가(공공기관) 전체 보안규정 진단 수행
+ref=SUN_1.01,SUN_1.02,SUN_1.03,SUN_1.04,SUN_1.05,SUN_1.06,SUN_1.07,SUN_1.08,SUN_1.09,SUN_1.10,SUN_2.01,SUN_2.02,SUN_2.03,SUN_2.04,SUN_2.05,SUN_2.06,SUN_2.07,SUN_2.08,SUN_2.09,SUN_2.10,SUN_2.11,SUN_2.12,SUN_2.13,SUN_2.14,SUN_2.15,SUN_2.16,SUN_2.17,SUN_2.18,SUN_2.19,SUN_2.20,SUN_3.01,SUN_3.02,SUN_3.03,SUN_3.04,SUN_3.05,SUN_3.06,SUN_3.07,SUN_3.08,SUN_3.09,SUN_4.01,SUN_4.02,SUN_4.03,SUN_5.01,SUN_5.02,SUN_5.03,SUN_5.04,SUN_5.05,SUN_5.06,SUN_6.01,SUN_6.02,SUN_6.03,SUN_7.01,SUN_8.01,SUN_8.02,SUN_8.03,U-2021-01,U-2021-02,U-2021-03,U-2021-04,U-2021-05,U-2021-06,U-2021-07,U-2021-08,U-2021-09,U-2021-10,U-2021-11,U-2021-12,U-2021-13,U-2021-14,U-2021-15,U-2021-16,U-2021-17,U-2021-18,U-2021-19,U-2021-20,U-2021-21,U-2021-22,U-2021-23,U-2021-24,U-2021-25,U-2021-26,U-2021-27,U-2021-28,U-2021-29,U-2021-30,U-2021-31,U-2021-32,U-2021-33,U-2021-34,U-2021-35,U-2021-36,U-2021-37,U-2021-38,U-2021-39,U-2021-40,U-2021-41,U-2021-42,U-2021-43,U-2021-44,U-2021-45,U-2021-46,U-2021-47,U-2021-48,U-2021-49,U-2021-50,U-2021-51,U-2021-52,U-2021-53,U-2021-54,U-2021-55,U-2021-56,U-2021-57,U-2021-58,U-2021-59,U-2021-60,U-2021-61,U-2021-62,U-2021-63,U-2021-64,U-2021-65,U-2021-66,U-2021-67,U-2021-68,U-2021-69,U-2021-70,U-2021-71,U-2021-72,SRV-2023-001,SRV-2023-004,SRV-2023-005,SRV-2023-006,SRV-2023-007,SRV-2023-008,SRV-2023-009,SRV-2023-010,SRV-2023-011,SRV-2023-012,SRV-2023-013,SRV-2023-014,SRV-2023-015,SRV-2023-016,SRV-2023-021,SRV-2023-022,SRV-2023-025,SRV-2023-026,SRV-2023-027,SRV-2023-028,SRV-2023-034,SRV-2023-035,SRV-2023-037,SRV-2023-040,SRV-2023-042,SRV-2023-043,SRV-2023-044,SRV-2023-045,SRV-2023-046,SRV-2023-047,SRV-2023-048,SRV-2023-060,SRV-2023-062,SRV-2023-063,SRV-2023-064,SRV-2023-066,SRV-2023-069,SRV-2023-070,SRV-2023-073,SRV-2023-074,SRV-2023-075,SRV-2023-081,SRV-2023-082,SRV-2023-083,SRV-2023-084,SRV-2023-087,SRV-2023-091,SRV-2023-092,SRV-2023-093,SRV-2023-094,SRV-2023-095,SRV-2023-096,SRV-2023-108,SRV-2023-109,SRV-2023-112,SRV-2023-115,SRV-2023-118,SRV-2023-121,SRV-2023-122,SRV-2023-127,SRV-2023-131,SRV-2023-133,SRV-2023-134,SRV-2023-135,SRV-2023-142,SRV-2023-144,SRV-2023-147,SRV-2023-148,SRV-2023-158,SRV-2023-161,SRV-2023-164,SRV-2023-165,SRV-2023-166,SRV-2023-170,SRV-2023-171,SRV-2023-173,SRV-2023-174,SRV-2023-175,IU-01,IU-02,IU-03,IU-04,IU-05,IU-06,IU-07,IU-08,IU-09,IU-10,IU-11,IU-12,IU-13,IU-14,IU-15,IU-16,IU-17,IU-18,IU-19,IU-20,IU-21,IU-22
+# 선택 옵션 scan_dir : 전체 디스크를 진단해야 할 항목에 대해서 설정된 디렉토리만 진단하도록 제한
+#   ex) scan_dir=/usr,/var,/home
+#scan_dir=
+#
+# 선택 옵션 www-hidden_scan_dir: 숨긴 파일 검색해야 할 항목에 대해서 설정된
+# 디렉토리만 진단하도록 제한
+#   ex) www-hidden_scan_dir=/usr,/var,/home
+#www-hidden_scan_dir=
+#
+# 선택 옵션 suid_sgid_scan_dir: suid, sgid  파일을 검색해야 할 항목에 대해서
+# 설정된 디렉토리만 진단하도록 제한
+#   ex) suid_sgid_scan_dir=/usr,/var,/home
+#suid_sgid_scan_dir=
+#
+# 선택 옵션 webtob_homedir: OS webtob 관련 항목에서 webtob 홈
+# 디렉토리를 지정 
+#   ex) webtob_homedir=/app/webtob
+#webtob_homedir=
+
+[asset_6]
+type=OS
+# 진단 대상 자산 타입 지정
+sub_type=SunOS(X86)
+# 진단 항목 코드 입력
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=SUN_1.01,SUN_1.02,SUN_1.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=SUN_ALL
+#   3) 설정 값이 없으면 Common Compliance, 2021 주요기반, 2023 금융기반, 정보보안관리평가(공공기관) 전체 보안규정 진단 수행
+ref=SUN_1.01,SUN_1.02,SUN_1.03,SUN_1.04,SUN_1.05,SUN_1.06,SUN_1.07,SUN_1.08,SUN_1.09,SUN_1.10,SUN_2.01,SUN_2.02,SUN_2.03,SUN_2.04,SUN_2.05,SUN_2.06,SUN_2.07,SUN_2.08,SUN_2.09,SUN_2.10,SUN_2.11,SUN_2.12,SUN_2.13,SUN_2.14,SUN_2.15,SUN_2.16,SUN_2.17,SUN_2.18,SUN_2.19,SUN_2.20,SUN_3.01,SUN_3.02,SUN_3.03,SUN_3.04,SUN_3.05,SUN_3.06,SUN_3.07,SUN_3.08,SUN_3.09,SUN_4.01,SUN_4.02,SUN_4.03,SUN_5.01,SUN_5.02,SUN_5.03,SUN_5.04,SUN_5.05,SUN_5.06,SUN_6.01,SUN_6.02,SUN_6.03,SUN_7.01,SUN_8.01,SUN_8.02,SUN_8.03,U-2021-01,U-2021-02,U-2021-03,U-2021-04,U-2021-05,U-2021-06,U-2021-07,U-2021-08,U-2021-09,U-2021-10,U-2021-11,U-2021-12,U-2021-13,U-2021-14,U-2021-15,U-2021-16,U-2021-17,U-2021-18,U-2021-19,U-2021-20,U-2021-21,U-2021-22,U-2021-23,U-2021-24,U-2021-25,U-2021-26,U-2021-27,U-2021-28,U-2021-29,U-2021-30,U-2021-31,U-2021-32,U-2021-33,U-2021-34,U-2021-35,U-2021-36,U-2021-37,U-2021-38,U-2021-39,U-2021-40,U-2021-41,U-2021-42,U-2021-43,U-2021-44,U-2021-45,U-2021-46,U-2021-47,U-2021-48,U-2021-49,U-2021-50,U-2021-51,U-2021-52,U-2021-53,U-2021-54,U-2021-55,U-2021-56,U-2021-57,U-2021-58,U-2021-59,U-2021-60,U-2021-61,U-2021-62,U-2021-63,U-2021-64,U-2021-65,U-2021-66,U-2021-67,U-2021-68,U-2021-69,U-2021-70,U-2021-71,U-2021-72,SRV-2023-001,SRV-2023-004,SRV-2023-005,SRV-2023-006,SRV-2023-007,SRV-2023-008,SRV-2023-009,SRV-2023-010,SRV-2023-011,SRV-2023-012,SRV-2023-013,SRV-2023-014,SRV-2023-015,SRV-2023-016,SRV-2023-021,SRV-2023-022,SRV-2023-025,SRV-2023-026,SRV-2023-027,SRV-2023-028,SRV-2023-034,SRV-2023-035,SRV-2023-037,SRV-2023-040,SRV-2023-042,SRV-2023-043,SRV-2023-044,SRV-2023-045,SRV-2023-046,SRV-2023-047,SRV-2023-048,SRV-2023-060,SRV-2023-062,SRV-2023-063,SRV-2023-064,SRV-2023-066,SRV-2023-069,SRV-2023-070,SRV-2023-073,SRV-2023-074,SRV-2023-075,SRV-2023-081,SRV-2023-082,SRV-2023-083,SRV-2023-084,SRV-2023-087,SRV-2023-091,SRV-2023-092,SRV-2023-093,SRV-2023-094,SRV-2023-095,SRV-2023-096,SRV-2023-108,SRV-2023-109,SRV-2023-112,SRV-2023-115,SRV-2023-118,SRV-2023-121,SRV-2023-122,SRV-2023-127,SRV-2023-131,SRV-2023-133,SRV-2023-134,SRV-2023-135,SRV-2023-142,SRV-2023-144,SRV-2023-147,SRV-2023-148,SRV-2023-158,SRV-2023-161,SRV-2023-164,SRV-2023-165,SRV-2023-166,SRV-2023-170,SRV-2023-171,SRV-2023-173,SRV-2023-174,SRV-2023-175,IU-01,IU-02,IU-03,IU-04,IU-05,IU-06,IU-07,IU-08,IU-09,IU-10,IU-11,IU-12,IU-13,IU-14,IU-15,IU-16,IU-17,IU-18,IU-19,IU-20,IU-21,IU-22
+# 선택 옵션 scan_dir : 전체 디스크를 진단해야 할 항목에 대해서 설정된 디렉토리만 진단하도록 제한
+#   ex) scan_dir=/usr,/var,/home
+#scan_dir=
+#
+# 선택 옵션 www-hidden_scan_dir: 숨긴 파일 검색해야 할 항목에 대해서 설정된
+# 디렉토리만 진단하도록 제한
+#   ex) www-hidden_scan_dir=/usr,/var,/home
+#www-hidden_scan_dir=
+#
+# 선택 옵션 suid_sgid_scan_dir: suid, sgid  파일을 검색해야 할 항목에 대해서
+# 설정된 디렉토리만 진단하도록 제한
+#   ex) suid_sgid_scan_dir=/usr,/var,/home
+#suid_sgid_scan_dir=
+#
+# 선택 옵션 webtob_homedir: OS webtob 관련 항목에서 webtob 홈
+# 디렉토리를 지정 
+#   ex) webtob_homedir=/app/webtob
+#webtob_homedir=
+
+
+[asset_7]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=ORACLE
+# 진단 항목 코드 입력
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=ORA_1.01,ORA_2.01,ORA_4.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=ORA_ALL
+#   3) 설정 값이 없으면 Common Compliance, 2021 주요기반, 2023 금융기반 전체 보안규정 진단 수행
+ref=ORA_1.01,ORA_1.02,ORA_1.03,ORA_1.04,ORA_1.05,ORA_1.06,ORA_2.01,ORA_2.02,ORA_2.03,ORA_2.04,ORA_2.05,ORA_2.06,ORA_2.07,ORA_2.08,ORA_2.09,ORA_3.01,ORA_3.02,ORA_3.03,ORA_3.04,ORA_3.05,ORA_3.06,ORA_3.07,ORA_3.08,ORA_4.01,ORA_4.02,ORA_4.03,ORA_4.04,ORA_4.05,ORA_4.06,ORA_4.07,ORA_4.08,ORA_5.01,ORA_6.01,ORA_6.02,ORA_7.01,ORA_7.02,ORA_7.03,D-2021-01,D-2021-02,D-2021-03,D-2021-04,D-2021-05,D-2021-06,D-2021-07,D-2021-08,D-2021-09,D-2021-10,D-2021-11,D-2021-12,D-2021-13,D-2021-15,D-2021-16,D-2021-17,D-2021-18,D-2021-19,D-2021-20,D-2021-21,D-2021-22,D-2021-23,D-2021-24,D-21,DBM-2023-001,DBM-2023-003,DBM-2023-004,DBM-2023-005,DBM-2023-006,DBM-2023-007,DBM-2023-008,DBM-2023-009,DBM-2023-011,DBM-2023-012,DBM-2023-013,DBM-2023-014,DBM-2023-015,DBM-2023-016,DBM-2023-017,DBM-2023-019,DBM-2023-020,DBM-2023-022,DBM-2023-024,DBM-2023-025,DBM-2023-026,DBM-2023-028,DBM-2023-029,DBM-2023-030
+# 선택 옵션 dba_id : DB 접속 계정 / as sysdba  접근하는 경우 계정 생략 가능 
+#   ex) dba_id=root
+#dba_id=
+# 선택 옵션 password : DB 접속 패스워드 / as sysdba로 접근하는 경우 패스워드 생략 가능 
+#   ex) password=passwd
+#password=
+# 선택 옵션 home_dir : ORACLE_HOME 환경 변수 (DB 설치 경로)
+#   ex) home_dir=/app/oracle
+#home_dir=
+# 선택 옵션 inst_name : 오라클 인스턴스 명 지정
+#   ex) inst_name=orcl
+#inst_name=
+# 필수 옵션 conn_id : connection identifier 로써 ORACLE SID, net_service_name 또는 HOST:[port]/service_name 형태 입력 
+#	ex) conn_id=orcl
+#	ex) conn_id=127.0.0.1:1521/orcl
+#conn_id=
+
+
+[asset_8]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=MYSQL
+# 진단 항목 코드 입력
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=MYS_1.01,MYS_2.01,MYS_4.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=MYS_ALL
+#   3) 설정 값이 없으면 Common Compliance, 2021 주요기반, 2023 금융기반 전체 보안규정 진단 수행
+ref=MYS_1.01,MYS_1.02,MYS_1.03,MYS_1.04,MYS_1.05,MYS_2.01,MYS_2.02,MYS_2.03,MYS_2.04,MYS_3.01,MYS_3.02,MYS_3.03,MYS_3.04,MYS_3.05,MYS_4.01,MYS_4.02,MYS_4.03,MYS_4.04,MYS_4.05,MYS_4.06,MYS_5.01,D-2021-01,D-2021-02,D-2021-03,D-2021-04,D-2021-05,D-2021-06,D-2021-10,D-2021-13,D-2021-16,D-2021-17,D-2021-21,D-2021-23,DBM-2023-001,DBM-2023-003,DBM-2023-004,DBM-2023-005,DBM-2023-006,DBM-2023-007,DBM-2023-008,DBM-2023-009,DBM-2023-011,DBM-2023-013,DBM-2023-016,DBM-2023-017,DBM-2023-019,DBM-2023-020,DBM-2023-022,DBM-2023-024,DBM-2023-025,DBM-2023-026,DBM-2023-028,DBM-2023-033
+# 선택 옵션 dba_id : DB 접속 계정 / 계정 정보를 입력하지 않는 경우 계정없이 접근 시도함
+#   ex) dba_id=root
+#dba_id=
+# 선택 옵션 password : DB 접속 패스워드 / 계정 정보를 입력하지 않는 경우 계정없이 접근 시도함
+#   ex) password=passwd
+#password=
+# 선택 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/mysql 
+#home_dir=
+# 선택 옵션 portnum : 포트 번호를 well-known 형태로 사용하지 않는 경우 (생략 시, 3306 포트)
+#	ex) portnum=3306
+#portnum=	
+# 선택 옵션 conn_id : connection identifier로써 Socket file을 이용해서 DBMS 접근하는 경우
+#	ex) conn_id=-S /tmp/mysql.sock
+#conn_id= 
+
+
+[asset_9]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=MARIA
+# 진단 항목 코드 입력
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=MAR_1.01,MAR_2.01,MAR_4.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=MAR_ALL
+#   3) 설정 값이 없으면 Common Compliance, 2021 주요기반, 2023 금융기반 전체 보안규정 진단 수행
+ref=MAR_1.01,MAR_1.02,MAR_1.03,MAR_1.04,MAR_1.05,MAR_2.01,MAR_2.02,MAR_2.03,MAR_2.04,MAR_3.01,MAR_3.02,MAR_3.03,MAR_3.04,MAR_3.05,MAR_4.01,MAR_4.02,MAR_4.03,MAR_4.04,MAR_4.05,MAR_4.06,MAR_5.01,PWD_1.01,D-2021-01,D-2021-02,D-2021-03,D-2021-04,D-2021-05,D-2021-06,D-2021-10,D-2021-13,D-2021-16,D-2021-17,D-2021-21,D-2021-23,DBM-2023-001,DBM-2023-003,DBM-2023-004,DBM-2023-005,DBM-2023-006,DBM-2023-007,DBM-2023-008,DBM-2023-009,DBM-2023-011,DBM-2023-013,DBM-2023-016,DBM-2023-017,DBM-2023-019,DBM-2023-020,DBM-2023-022,DBM-2023-024,DBM-2023-025,DBM-2023-026,DBM-2023-028
+# 선택 옵션 dba_id : DB 접속 계정 / 계정 정보를 입력하지 않는 경우 계정없이 접근 시도함
+#   ex) dba_id=root
+#dba_id=
+# 선택 옵션 password : DB 접속 패스워드 / 계정 정보를 입력하지 않는 경우 계정없이 접근 시도함
+#   ex) password=passwd
+#password=
+# 선택 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/maria
+#home_dir=
+# 선택 옵션 portnum : 포트 번호를 well-known 형태로 사용하지 않는 경우 (생략 시, 3306 포트)
+#	ex) portnum=3306
+#portnum=	
+# 선택 옵션 conn_id : connection identifier로써 Socket file을 이용해서 DBMS 접근하는 경우
+#	ex) conn_id=-S /tmp/mysql.sock
+#conn_id= 
+
+
+[asset_10]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=POSTGRES
+# 진단 항목 코드 입력
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=POS_1.01,POS_2.01,POS_4.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=POS_ALL
+#   3) 설정 값이 없으면 Common Compliance,  2021 주요기반, 2023 금융기반 전체 보안규정 진단 수행 
+ref=POS_1.01,POS_1.02,POS_1.03,POS_2.01,POS_2.02,POS_2.03,POS_3.01,POS_3.02,POS_3.03,POS_4.01,POS_4.02,POS_4.03,POS_4.04,POS_4.05,POS_4.06,POS_5.01,POS_6.01,POS_6.02,D-2021-01,D-2021-02,D-2021-03,D-2021-04,D-2021-05,D-2021-06,D-2021-10,D-2021-11,D-2021-13,D-2021-16,D-2021-17,D-2021-20,D-2021-21,D-2021-23,DBM-2023-001,DBM-2023-003,DBM-2023-004,DBM-2023-005,DBM-2023-006,DBM-2023-007,DBM-2023-008,DBM-2023-009,DBM-2023-011,DBM-2023-013,DBM-2023-015,DBM-2023-016,DBM-2023-017,DBM-2023-019,DBM-2023-020,DBM-2023-022,DBM-2023-024,DBM-2023-025,DBM-2023-026,DBM-2023-028,DBM-2023-032
+# 필수 옵션 dba_id : DB 접속 계정.
+#   ex) dba_id=postgres
+#dba_id=
+# 필수 옵션 password : DB 접속 패스워드.
+#   ex) password=passwd
+#password=
+# 선택 옵션 portnum : 포트 번호를 well-known 형태로 사용하지 않는 경우 (생략 시, 5432 포트)
+#	ex) portnum=5432
+#portnum=	
+# 선택 옵션 db_name: 연결한 데이터베이스 이름 (기본 값: "account name")
+#	ex) db_name=postgres
+#db_name=	
+# 선택 옵션 service_runner: psql(DB 클라이언트)를 수행하기 위한
+# 계정이며 해당 serviec_runner 계정으로 전환(생략 시, posgreSQL 구동 중인 계정으로 전환) 
+# su - $service_runner
+#	ex) service_runner=postgres
+#service_runner=
+
+
+[asset_11]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=ALTIBASE
+# 진단 항목 코드 입력
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=ALT_1.01,ALT_2.01,ALT_4.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=ALT_ALL
+#   3) 설정 값이 없으면 Common Compliance, 2021 주요기반 전체 보안규정 진단 수행 
+ref=ALT_1.01,ALT_1.02,ALT_1.03,ALT_1.04,ALT_2.01,ALT_2.02,ALT_2.03,ALT_3.01,ALT_3.02,ALT_3.03,ALT_3.04,ALT_4.01,ALT_4.02,ALT_4.03,ALT_5.01,D-2021-01,D-2021-02,D-2021-03,D-2021-04,D-2021-05,D-2021-06,D-2021-08,D-2021-10,D-2021-11,D-2021-12,D-2021-13,D-2021-15,D-2021-16,D-2021-19,D-2021-20,D-2021-21,D-2021-23,D-2021-24
+# 필수 옵션 dba_id : DB 접속 계정.
+#   ex) dba_id=root
+#dba_id=
+# 필수 옵션 password : DB 접속 패스워드.
+#   ex) password=passwd
+#password=
+# 선택 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/altibase
+#home_dir=
+# 선택 옵션 portnum : 포트 번호를 well-known 형태로 사용하지 않는 경우 (생략 시, 20300 포트)
+#	ex) portnum=20300
+#portnum=	
+
+
+[asset_12]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=SYBASE_ASE
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=SYA_1.01,SYA_2.01,SYA_4.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=SYA_ALL
+#   3) 설정 값이 없으면 Common Compliance, 2021 주요기반 전체 보안규정 진단 수행
+ref=SYA_1.01,SYA_1.02,SYA_1.03,SYA_1.04,SYA_1.05,SYA_1.06,SYA_1.07,SYA_1.08,SYA_1.09,SYA_2.01,SYA_2.02,SYA_2.03,SYA_2.04,SYA_2.05,SYA_2.06,SYA_3.01,SYA_3.02,SYA_3.03,SYA_3.04,SYA_3.05,SYA_4.01,SYA_4.02,SYA_4.03,SYA_5.01,SYA_6.01,SYA_6.02,D-2021-01,D-2021-02,D-2021-03,D-2021-04,D-2021-05,D-2021-10,D-2021-11,D-2021-13,D-2021-15,D-2021-16,D-2021-17,D-2021-23
+# 필수 옵션 dba_id : DB 접속 계정.
+#   ex) dba_id=root
+dba_id=
+# 필수 옵션 password : DB 접속 패스워드.
+#   ex) password=passwd
+password=
+# 선택 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/sybase_ase
+#home_dir=
+# 선택 옵션 conn_id : connection identifier로써 server name 에 대한 옵션 값 추출  (dataserver -sDB_SERVERNAME -s 옵션 값 추출)
+#	ex) conn_id=DB_SERVERNAME
+#conn_id= 
+
+
+[asset_13]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=TIBERO
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=TBR_1.05,TBR_2.01,TBR_4.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=TBR_ALL
+#   3) 설정 값이 없으면 Common Compliance, 2021 주요기반, 2023 금융기반 전체 보안규정 진단 수행
+ref=TBR_1.05,TBR_2.01,TBR_2.02,TBR_2.03,TBR_2.04,TBR_3.01,TBR_4.02,TBR_4.03,TBR_4.04,TBR_5.01,D-2021-01,D-2021-02,D-2021-03,D-2021-04,D-2021-05,D-2021-06,D-2021-08,D-2021-10,D-2021-11,D-2021-12,D-2021-13,D-2021-15,D-2021-16,D-2021-17,D-2021-19,D-2021-20,D-2021-21,D-2021-23,D-2021-24,DBM-2023-001,DBM-2023-003,DBM-2023-004,DBM-2023-005,DBM-2023-006,DBM-2023-007,DBM-2023-008,DBM-2023-009,DBM-2023-011,DBM-2023-013,DBM-2023-015,DBM-2023-016,DBM-2023-017,DBM-2023-019,DBM-2023-020,DBM-2023-022,DBM-2023-024,DBM-2023-025,DBM-2023-026,DBM-2023-028,DBM-2023-030
+# 필수 옵션 dba_id : DB 접속 계정.
+#   ex) dba_id=root
+dba_id=
+# 필수 옵션 password : DB 접속 패스워드.
+#   ex) password=passwd
+password=
+# 선택 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/tibero
+#home_dir=
+# 선택 옵션 conn_id : connection identifier로써 SVR_SID 옵션 값 추출 
+#	ex) conn_id=dblink
+#conn_id= 
+
+
+[asset_14]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=MONGODB
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=MON_1.01,MON_2.01,MON_4.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=MON_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행
+ref=MON_1.01,MON_1.02,MON_2.01,MON_2.02,MON_3.01,MON_3.02,MON_3.03,MON_3.04,MON_3.05,MON_4.01,MON_4.02,MON_4.03,MON_5.01
+# 선택 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/mongo
+#home_dir=
+# 선택 옵션 inst_name: dbpath 지정 
+#   ex) inst_name=/var/lib/mongodb
+#inst_name=
+
+
+[asset_15]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=INFORMIX
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=INF_1.01,INF_2.01,INF_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=INF_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행. 
+ref=INF_1.01,INF_1.02,INF_1.03,INF_1.04,INF_2.01,INF_2.02,INF_2.03,INF_2.04,INF_2.05,INF_2.06,INF_2.07,INF_2.08,INF_3.01,INF_3.02,INF_3.03,INF_4.01
+# 필수 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/informix
+#home_dir=
+
+
+[asset_16]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=DB2
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=DB2_1.01,DB2_2.01,DB2_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=DB2_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행. 
+ref=DB2_1.01,DB2_1.02,DB2_1.03,DB2_1.04,DB2_2.01,DB2_2.02,DB2_2.03,DB2_2.04,DB2_2.05,DB2_2.06,DB2_3.01,DB2_3.02,DB2_3.03,DB2_4.01,DB2_4.02,DB2_4.03,DB2_5.01,DB2_6.01
+# 필수 옵션 dba_id : DB 접속 계정으로써, OS 계정으로 접근 가능한 경우 OS 계정명 
+#   ex) dba_id=root
+dba_id=
+# 선택 옵션 password : DB 접속 패스워드로써, 생략 시 사용자 계정 정보 없이 접근 시도 
+#   ex) password=passwd
+#password=
+# 필수 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/db2
+#home_dir=
+# 필수 옵션 db_name : 데이터 베이스 명 
+#   ex) db_name=dbname
+#db_name=
+
+
+[asset_17]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=REDIS
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=RDS_1.01,RDS_2.01,RDS_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=RDS_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행. 
+ref=RDS_1.01,RDS_1.02,RDS_2.01,RDS_2.02,RDS_3.01,RDS_3.02,RDS_3.03,RDS_3.04,RDS_3.05,RDS_3.06,RDS_3.07,RDS_4.01,RDS_4.02,RDS_4.03,RDS_5.01
+# 선택 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/redis
+#home_dir=
+# 선택 옵션 conf_file : 설정 파일 경로 
+#   ex) conf_file=/etc/redis.conf
+
+
+[asset_18]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=SYBASE_IQ
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=SYI_1.01,SYI_2.01,SYI_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=SYI_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행. 
+ref=SYI_1.01,SYI_1.02,SYI_1.03,SYI_1.04,SYI_2.01,SYI_2.02,SYI_2.03,SYI_3.01,SYI_3.02,SYI_3.03,SYI_3.04,SYI_4.01,SYI_4.02,SYI_5.01,SYI_6.01,SYI_6.0
+2
+# 필수 옵션 dba_id : DB 접속 계정.
+#   ex) dba_id=root
+#dba_id=
+# 필수 옵션 password : DB 접속 패스워드.
+#   ex) password=passwd
+#password=
+# 선택 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/sybase_iq
+#home_dir=
+# 선택 옵션 dsn : Data source name 
+#   ex) dsn=IQDSN
+#dsn=
+# 선택 옵션 odbcini
+#   ex) odbcini=/app/sybase_iq/.odbc.ini
+#odbcini=
+
+[asset_19]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=VERTICA
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=VTC_1.01,VTC_2.01,VTC_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=VTC_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행. 
+ref=VTC_1.01,VTC_1.02,VTC_1.03,VTC_1.04,VTC_1.05,VTC_2.01,VTC_2.02,VTC_2.03,VTC_2.04,VTC_3.01,VTC_3.02,VTC_4.01,VTC_4.02,VTC_4.03,VTC_4.04,VTC_4.05,VTC_5.01
+# 필수 옵션 dba_id : DB 접속 계정.
+#   ex) dba_id=root
+#dba_id=
+# 필수 옵션 password : DB 접속 패스워드.
+#   ex) password=passwd
+#password=
+# 선택 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/vertica
+#home_dir=
+# 선택 옵션 portnum : 포트 번호를 well-known 형태로 사용하지 않는 경우 (생략 시, 5433 포트)
+#	ex) portnum=5433
+#portnum=	
+
+
+[asset_20]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=CASSANDRA
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=CAS-1,CAS-2,CAS-3
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=CAS_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행. 
+ref=CAS-1,CAS-2,CAS-3,CAS-4,CAS-5,CAS-6,CAS-7
+# 선택 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/cass
+#home_dir=
+
+
+[asset_21]
+type=DB
+# 진단 대상 자산 타입 지정
+sub_type=CUBRID
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. 
+#   ex) ref=D-2021-01,D-2021-02,D-2021-04
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. 
+#   ex) ref=D-2021-ALL
+#   3) 설정 값이 없으면 2021 주요기반 전체 보안규정 진단 수행
+ref=D-2021-01,D-2021-02,D-2021-04,D-2021-05,D-2021-06,D-2021-10,D-2021-13,D-2021-16,D-2021-17,D-2021-20,D-2021-21,D-2021-23
+# 선택 옵션 dba_id : DB 접속 계정 / 계정 정보를 입력하지 않는 경우 계정없이 접근 시도함
+#   ex) dba_id=root
+#dba_id=
+# 선택 옵션 password : DB 접속 패스워드 / 계정 정보를 입력하지 않는 경우 계정없이 접근 시도함
+#   ex) password=passwd
+#password=
+# 선택 옵션 home_dir : DBMS 설치 디렉토리 지정.
+#   ex) home_dir=/app/cubrid
+#home_dir=
+# 선택 옵션 db_name : 데이터 베이스 명 
+#   ex) db_name=dbname
+#db_name=dbname
+
+
+[asset_22]
+type=WEB
+# 진단 대상 자산 타입 지정
+sub_type=APACHE
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=APA_1.01,APA_2.01,APA_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=APA_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행. 
+ref=APA_1.01,APA_1.02,APA_1.03,APA_1.04,APA_1.05,APA_1.06,APA_1.07,APA_1.08,APA_1.09,APA_1.10,APA_1.11,APA_1.12,APA_2.01,APA_2.02,APA_2.03,APA_3.01
+# 선택 옵션 home_dir : WEB 설치 디렉토리 지정.
+#   ex) home_dir=/app/apache
+#home_dir=
+
+
+[asset_23]
+type=WEB
+# 진단 대상 자산 타입 지정
+sub_type=TOMCAT
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=TOM_1.01,TOM_2.01,TOM_4.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=TOM_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행.  
+ref=TOM_1.01,TOM_1.02,TOM_1.03,TOM_1.04,TOM_1.05,TOM_1.06,TOM_1.07,TOM_1.08,TOM_1.09,TOM_1.10,TOM_1.11,TOM_2.01,TOM_2.02,TOM_2.03,TOM_2.04,TOM_3.01,TOM_4.01,TOM_4.02,TOM_4.03,TOM_4.04
+# 선택 옵션 base_dir : 톰캣 인스턴스 디렉토리 (-Dcatalina.base 옵션 값)
+#   ex) base_dir=/app/tomcat1
+#base_dir=
+
+
+[asset_24]
+type=WEB
+# 진단 대상 자산 타입 지정
+sub_type=NGINX
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=NGX_1.01,NGX_2.01,NGX_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=NGX_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행.  
+ref=NGX_1.01,NGX_1.02,NGX_1.03,NGX_1.04,NGX_1.05,NGX_1.06,NGX_1.07,NGX_1.08,NGX_1.09,NGX_1.10,NGX_2.01,NGX_2.02,NGX_3.01
+# 선택 옵션 home_dir : WEB 설치 디렉토리 지정.
+#   ex) home_dir=/app/nginx
+#home_dir=
+
+
+[asset_25]
+type=WEB
+# 진단 대상 자산 타입 지정
+sub_type=WEBLOGIC
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=WLG_1.01,WLG_2.01,WLG_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=WLG_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행.  
+ref=WLG_1.01,WLG_1.02,WLG_1.03,WLG_1.04,WLG_1.05,WLG_1.06,WLG_1.07,WLG_1.08,WLG_1.09,WLG_1.10,WLG_1.11,WLG_1.12,WLG_2.01,WLG_2.02,WLG_2.03,WLG_3.01,WLG_4.01,WLG_4.02,WLG_4.03,WLG_4.04,WLG_4.05
+# 선택 옵션 home_dir : Weblogic domain 디렉토리 입력 / 프로세스 실행 인자 중 -Dwelogic.home, -Dwls.home 옵션 값
+#   ex) home_dir=/app/weblogic/domain
+#home_dir=
+
+
+[asset_26]
+type=WEB
+# 진단 대상 자산 타입 지정
+sub_type=WEBTOB
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=WTB_1.01,WTB_2.01,WTB_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=WTB_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행.  
+ref=ECW-WB-001,WTB_1.01,WTB_1.02,WTB_1.03,WTB_1.04,WTB_1.05,WTB_1.06,WTB_1.07,WTB_1.08,WTB_1.09,WTB_1.10,WTB_1.11,WTB_1.12,WTB_1.13,WTB_2.01,WTB_2.02,WTB_2.03,WTB_3.01
+# 선택 옵션 home_dir : WEB 설치 디렉토리 지정.
+#   ex) home_dir=/app/webtob
+#home_dir=
+# 선택 옵션 conf_file : wsconfig 파일 지정 
+#   ex) conf_file=/app/webtob/config/wsconfig
+#conf_file=
+
+
+[asset_27]
+type=WEB
+# 진단 대상 자산 타입 지정
+sub_type=JEUS
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=JUS_1.01,JUS_2.01,JUS_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=JUS_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행.  
+ref=JUS_1.01,JUS_1.02,JUS_1.03,JUS_1.04,JUS_1.05,JUS_1.06,JUS_1.07,JUS_1.08,JUS_1.09,JUS_1.10,JUS_1.11,JUS_1.12,JUS_1.13,JUS_2.01,JUS_2.02,JUS_2.03,JUS_3.01,JUS_4.01,JUS_4.02,JUS_4.03,JUS_4.04
+# 선택 옵션 home_dir : JEUS 홈 디렉토리 / 프로세스 실행 인자 중 -Djeus.home 옵션 값
+#   ex) home_dir=/app/tmax/jeus
+#home_dir=
+# 선택 옵션 domain_name : JEUS 도메인 이름 / 프로세스 실행 인자 중 -Djeus.domain.name 옵션 값
+#domain_name=
+
+
+[asset_28]
+type=WEB
+# 진단 대상 자산 타입 지정
+sub_type=JBOSS
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=JBS_1.01,JBS_2.01,JBS_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=JBS_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행.  
+ref=JBS_1.01,JBS_1.02,JBS_1.03,JBS_1.04,JBS_1.05,JBS_1.06,JBS_1.07,JBS_1.08,JBS_1.09,JBS_1.10,JBS_1.11,JBS_1.12,JBS_2.01,JBS_2.02,JBS_2.03,JBS_3.01,JBS_4.01,JBS_4.02,JBS_4.03,JBS_4.04
+# 선택 옵션 base_dir: JBOSS base 디렉토리 / 프로세스 실행 인자 중 -Djboss.server.base.dir 옵션 값 
+#   ex) base_dir=/app/jboss/standalone
+#base_dir=
+# 선택 옵션 conf_file: JBOSS service-config 
+#   ex) conf_file=standalone-service.xml
+#conf_file=
+
+[asset_29]
+type=WEB
+# 진단 대상 자산 타입 지정
+sub_type=OHS
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=OHS_1.01,OHS_2.01,OHS_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=OHS_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행.  
+ref=OHS_1.01,OHS_1.02,OHS_1.03,OHS_1.04,OHS_1.05,OHS_1.06,OHS_1.07,OHS_1.08,OHS_1.09,OHS_1.10,OHS_1.11,OHS_1.12,OHS_2.01,OHS_2.02,OHS_2.03,OHS_3.01
+# 선택 옵션 home_dir : WEB 설치 디렉토리 지정.
+#   ex) home_dir=/app/ohs
+#home_dir=
+
+
+[asset_30]
+type=WEB
+# 진단 대상 자산 타입 지정
+sub_type=RESIN
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=RSN_1.01,RSN_2.01,RSN_3.01
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=RSN_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행. 
+ref=RSN_1.01,RSN_1.02,RSN_1.03,RSN_1.04,RSN_1.05,RSN_1.06,RSN_1.07,RSN_2.01,RSN_2.02,RSN_3.01,RSN_4.01,RSN_4.02,RSN_4.03
+# 선택 옵션 home_dir : WEB 설치 디렉토리 지정 / 프로세스 실행 중 -Dresin.home 옵션 값 (입력 시 home_dir, base_dir, conf_file 전부 입력)
+#   ex) home_dir=/app/resin
+#home_dir=
+# 선택 옵션 base_dir : Resin base 디렉토리 / 프로세스 실행 중 -Dresin.root 옵션 값 (입력 시 home_dir, base_dir, conf_file 전부 입력)
+#   ex) base_dir=/app/resin_base
+#   
+#base_dir=
+# 선택 옵션 conf_file : Resin 설정 파일 / 프로세스 실행 중 -conf 옵션 값 (입력 시 home_dir, base_dir, conf_file 전부 입력)
+#   ex) conf_file=/app/resin_base/conf/resin1.xml
+#   
+#conf_file=
+
+
+[asset_31]
+type=WEB
+# 진단 대상 자산 타입 지정
+sub_type=NODEJS
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=NJS_1.01,NJS_1.02,NJS_1.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=NJS_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행. 
+ref=NJS_1.01,NJS_1.02,NJS_1.03,NJS_1.04,NJS_1.05,NJS_2.01
+# 선택 옵션 home_dir : WEB 설치 디렉토리 지정.
+#   ex) home_dir=/app/node
+#home_dir=
+
+
+[asset_32]
+type=WEB
+# 진단 대상 자산 타입 지정
+sub_type=IHS
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=IHS_1.01,IHS_1.02,IHS_1.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=IHS_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행. 
+ref=IHS_1.01,IHS_1.02,IHS_1.03,IHS_1.04,IHS_1.05,IHS_1.06,IHS_1.07,IHS_1.08,IHS_1.09,IHS_1.10,IHS_1.11,IHS_1.12,IHS_2.01,IHS_2.02,IHS_2.03,IHS_3.01
+# 선택 옵션 home_dir : WEB 설치 디렉토리 지정.
+#   ex) home_dir=/app/ihs
+
+
+[asset_33]
+type=WEB
+# 진단 대상 자산 타입 지정
+sub_type=WEBSPHERE
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=WSP_1.01,WSP_1.02,WSP_1.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) ref=WSP_ALL
+#   3) 설정 값이 없으면 Common Compliance 전체 보안규정 진단 수행. 
+ref=WSP_1.01,WSP_1.02,WSP_1.03,WSP_1.04,WSP_1.05,WSP_1.06,WSP_1.07,WSP_1.08,WSP_1.09,WSP_2.01,WSP_2.02,WSP_3.01,WSP_4.01,WSP_4.02,WSP_4.03,WSP_4.04
+# 선택 옵션 home_dir : WEB 설치 디렉토리 지정.
+#   ex) home_dir=/usr/local/tomcat
+#home_dir=
+
+[asset_34]
+type=CLOUD
+# 진단 대상 자산 타입 지정
+sub_type=DOCKER
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. ex) ref=DO-2021-01,D-2021-02,D-2021-03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) DO-2020-ALL
+#   3) 설정 값이 없으면 Cloud Common Compliance 전체 보안규정 진단 수행. 
+ref=DO-2020-01,DO-2020-02,DO-2020-03,DO-2020-04,DO-2020-05,DO-2020-06,DO-2020-07,DO-2020-08,DO-2020-09,DO-2020-10,DO-2020-11,DO-2020-12,DO-2020-13,DO-2020-14,DO-2020-15,DO-2020-16,DO-2020-17,DO-2020-18,DO-2020-19,DO-2020-20,DO-2020-21,DO-2020-22,DO-2020-23,DO-2020-24,DO-2020-25,DO-2020-26,DO-2020-27,DO-2020-28,DO-2020-29,DO-2020-30,DO-2020-31,DO-2020-32,DO-EQST-1.01,DO-EQST-1.02,DO-EQST-1.03,DO-EQST-1.04,DO-EQST-1.05,DO-EQST-1.06,DO-EQST-1.07,DO-EQST-1.08,DO-EQST-1.09,DO-EQST-2.01,DO-EQST-2.02,DO-EQST-3.01,DO-EQST-3.02,DO-EQST-3.03,DO-EQST-4.01,DO-EQST-4.02,DO-EQST-4.03,DO-EQST-5.03
+
+[asset_2]
+type=CLOUD
+# 진단 대상 자산 타입 지정
+sub_type=KUBERNETES
+# 진단 항목 코드 입력.
+#   1) , 를 구분자로 sub_type에서 지원하는 다수 항목 코드 입력 가능. 
+#   ex) ref=KUBE-EQST-1.01, KUBE-EQST-1.02, KUBE-EQST-1.03
+#   2) 항목 코드 prefix에 ALL을 입력하여 보안 규정 전체 수집 가능. ex) KBUE-EQST-ALL
+#   3) 설정 값이 없으면 Cloud Common Compliance 전체 보안규정 진단 수행. 
+ref=KUBE-EQST-1.01,KUBE-EQST-1.02,KUBE-EQST-1.03,KUBE-EQST-1.04,KUBE-EQST-1.05,KUBE-EQST-2.01,KUBE-EQST-2.02,KUBE-EQST-3.01,KUBE-EQST-3.02,KUBE-EQST-4.01,KUBE-EQST-4.02,KUBE-EQST-5.01,KUBE-EQST-5.02,KUBE-EQST-5.03,KUBE-EQST-6.01,KUBE-EQST-6.02,KUBE-EQST-6.03,KUBE-EQST-6.04,KUBE-EQST-6.05,KUBE-EQST-7.01,KUBE-EQST-7.02,KUBE-EQST-8.02
